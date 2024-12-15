@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaHQ checklists</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript to handle switching between forms
+        function showForm(formId) {
+            const forms = document.querySelectorAll('.iframe-container');
+            forms.forEach((form) => form.style.display = 'none'); // Hide all forms
+            document.getElementById(formId).style.display = 'block'; // Show the selected form
+        }
+    </script>
+</head>
+<body>
+    <!-- Back to Main Site Button -->
+    <a href="https://pizzahqkebubblesprivatesite.salty.cool" class="back-button">← Back to Main Site</a>
+
+    <!-- Navigation Menu -->
+    <nav class="form-menu">
+        <button onclick="showForm('form1')">Form 1</button>
+        <button onclick="showForm('form2')">Form 2</button>
+        <button onclick="showForm('form3')">Form 3</button>
+    </nav>
+
+    <!-- JotForm Embeds -->
+    <div id="form1" class="iframe-container" style="display: block;">
+        <iframe 
+            src="https://form.jotform.com/your-form-id-1" 
+            title="JotForm 1">
+        </iframe>
+    </div>
+    <div id="form2" class="iframe-container" style="display: none;">
+        <iframe 
+            src="https://form.jotform.com/your-form-id-2" 
+            title="JotForm 2">
+        </iframe>
+    </div>
+    <div id="form3" class="iframe-container" style="display: none;">
+        <iframe 
+            src="https://form.jotform.com/your-form-id-3" 
+            title="JotForm 3">
+        </iframe>
+    </div>
+</body>
+</html>
